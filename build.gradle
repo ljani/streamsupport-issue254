@@ -1,0 +1,41 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "com.android.tools.build:gradle:2.2.2"
+    }
+}
+
+apply plugin: "com.android.application"
+
+repositories {
+    jcenter()
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        applicationId "io.ljani.streamsupport.issue254"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        jackOptions {
+            enabled true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    compile "net.sourceforge.streamsupport:streamsupport:1.5.2"
+    compile "net.sourceforge.streamsupport:streamsupport-cfuture:1.5.2"
+}
+
